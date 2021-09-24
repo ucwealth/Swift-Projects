@@ -1,3 +1,3 @@
-# Storm Viewer
+# Social Media/Sharing app
 
-![](projectImageOptimized.gif)
+<img src="social-media-app.gif" width="150" height="310" />
