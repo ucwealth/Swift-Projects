@@ -8,21 +8,19 @@
 import UIKit
 import WebKit
 
-class ViewController: UIViewController, WKNavigationDelegate {
+class ViewController: UITableViewController, WKNavigationDelegate {
     var webView: WKWebView!
     var progressView: UIProgressView!
     var websites = ["apple.com", "hackingwithswift.com"]
-    
-    override func loadView() {
-        webView = WKWebView()
-        webView.navigationDelegate = self
-        view = webView
-    }
+    var selectedRow = "row"
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        webView = WKWebView()
+        webView.navigationDelegate = self
         webView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress), options: .new, context: nil)
+        webView.allowsBackForwardNavigationGestures = true
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Open", style: .plain, target: self, action: #selector(openTapped))
         
@@ -37,9 +35,27 @@ class ViewController: UIViewController, WKNavigationDelegate {
         toolbarItems = [back, progressButton, spacer, forward, refresh]
         navigationController?.isToolbarHidden = false
         
-        let url = URL(string: "https://" + websites[0])!
+    }
+    
+    // MARK: - Table View
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return websites.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = websites[indexPath.row]
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        view = webView
+        let selected = tableView.cellForRow(at: indexPath)
+        selectedRow = selected?.textLabel?.text ?? "not here"
+       
+        let url = URL(string: "https://" + selectedRow)!
         webView.load(URLRequest(url: url))
-        webView.allowsBackForwardNavigationGestures = true
     }
 
     @objc func openTapped() {
