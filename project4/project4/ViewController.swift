@@ -32,7 +32,9 @@ class ViewController: UIViewController, WKNavigationDelegate {
         
         let refresh = UIBarButtonItem(barButtonSystemItem: .refresh, target: webView, action: #selector(webView.reload))
         let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        toolbarItems = [progressButton, spacer, refresh]
+        let back = UIBarButtonItem(title: "Back", style: .plain, target: webView, action: #selector(webView.goBack))
+        let forward = UIBarButtonItem(title: "Forward", style: .plain, target: webView, action: #selector(webView.goForward))
+        toolbarItems = [back, progressButton, spacer, forward, refresh]
         navigationController?.isToolbarHidden = false
         
         let url = URL(string: "https://" + websites[0])!
@@ -75,6 +77,9 @@ class ViewController: UIViewController, WKNavigationDelegate {
                 if host.contains(website) {
                     decisionHandler(.allow)
                     return
+                } else {
+                    let ac = UIAlertController(title: "Not Allowed!", message: "This site is blocked!", preferredStyle: .alert)
+                    ac.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))
                 }
             }
         }
