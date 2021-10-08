@@ -6,8 +6,13 @@
 //
 
 import UIKit
+import LBTATools
 
-class MainController: UIViewController {
+class PostCell: LBTAListCell<String> {
+    <#code#>
+}
+
+class MainController: LBTAListController<T, U> {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .green

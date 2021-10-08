@@ -23,6 +23,16 @@ class AppCoordinator {
     private func showQuotes() {
         let quotesViewController = QuotesViewController.instantiate()
         
+        quotesViewController.didShowQuote = { [weak self] (quote) in
+            self?.showQuote(quote)
+            
+        }
+        
         navigationController.pushViewController(quotesViewController, animated: true)
     }
+    
+    private func showQuote() {
+        
+    }
+    
 }

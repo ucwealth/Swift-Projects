@@ -11,6 +11,7 @@ import UIKit
 class QuotesViewController: UIViewController, Storyboardable {
 
     // MARK: - Properties
+    var didShowQuote: ((Quote) -> Void)?
     
     private let quotes: [Quote] = [
         Quote(author: "Marie Curie",        content: "Be less curious about people and more curious about ideas."),
@@ -120,6 +121,9 @@ extension QuotesViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        let quote = quotes[indexPath.row]
+        didShowQuote?(quote)
     }
     
 }
