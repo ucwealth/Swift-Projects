@@ -10,11 +10,11 @@ import LBTATools
 
 class PostCell: LBTAListCell<String> {
     
-    let imageView = UIImageView(backgroundColor: .orange)
+    let imageView = UIImageView(backgroundColor: .purple)
     let nameLabel = UILabel(text: "Name Label")
     let dateLabel = UILabel(text: "Sunday at 12.09PM")
     let postTextLabel = UILabel(text: "This is the post text")
-    let imageViewGrid = UIView(backgroundColor: .purple)
+    let imageViewGrid = UIView(backgroundColor: .orange)
     
     override func setupViews() {
         backgroundColor = .white
