@@ -14,7 +14,8 @@ class PostCell: LBTAListCell<String> {
     let nameLabel = UILabel(text: "Name Label")
     let dateLabel = UILabel(text: "Sunday at 12.09PM")
     let postTextLabel = UILabel(text: "This is the post text")
-    let imageViewGrid = UIView(backgroundColor: .orange)
+//    let imageViewGrid = UIView(backgroundColor: .orange)
+    let photosGridController = PhotosGridController()
     
     override func setupViews() {
         backgroundColor = .white
@@ -23,7 +24,7 @@ class PostCell: LBTAListCell<String> {
                      stack(nameLabel, dateLabel),
                      spacing: 10).padLeft(12).padRight(12).padTop(12) ,
               postTextLabel,
-              imageViewGrid, spacing: 10)
+              photosGridController.view, spacing: 10)
     }
 }
 

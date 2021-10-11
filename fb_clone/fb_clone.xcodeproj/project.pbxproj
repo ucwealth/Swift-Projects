@@ -62,7 +62,6 @@
 		B4BA5BA8270F657400544D1F /* fb_clone */ = {
 			isa = PBXGroup;
 			children = (
-				B407D3CE27119B55009086F4 /* PhotosGridController.swift */,
 				B4BA5BA9270F657400544D1F /* AppDelegate.swift */,
 				B4BA5BAB270F657400544D1F /* SceneDelegate.swift */,
 				B4BA5BAD270F657400544D1F /* ContentView.swift */,
@@ -71,6 +70,7 @@
 				B4BA5BB7270F657900544D1F /* Info.plist */,
 				B4BA5BB1270F657900544D1F /* Preview Content */,
 				B4BA5BBE271013BD00544D1F /* MainController.swift */,
+				B407D3CE27119B55009086F4 /* PhotosGridController.swift */,
 			);
 			path = fb_clone;
 			sourceTree = "<group>";

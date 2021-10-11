@@ -10,8 +10,13 @@ import SwiftUI
 import LBTATools
 
 class PhotoGridCell: LBTAListCell<String> {
+    
+    let imageView = UIImageView(image: UIImage(named: ""), contentMode: .scaleAspectFill)
+    
     override func setupViews() {
         backgroundColor = .yellow
+        addSubview(imageView)
+        imageView.fillSuperview()
     }
 }
 
@@ -27,7 +32,7 @@ class PhotosGridController: LBTAListController<PhotoGridCell, String>, UICollect
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = (view.frame.width - 4 * cellSpacing) / 3
-        return .init(width: width, height: 100)
+        return .init(width: width, height: width)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
