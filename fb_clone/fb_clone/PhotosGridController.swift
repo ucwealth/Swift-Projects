@@ -11,12 +11,21 @@ import LBTATools
 
 class PhotoGridCell: LBTAListCell<String> {
     
+    override var item: String! {
+        didSet {
+            imageView.image = UIImage(named: item)
+        }
+    }
+    
     let imageView = UIImageView(image: UIImage(named: ""), contentMode: .scaleAspectFill)
     
     override func setupViews() {
         backgroundColor = .yellow
-        addSubview(imageView)
-        imageView.fillSuperview()
+        
+//        addSubview(imageView)
+//        imageView.fillSuperview()
+        
+        stack(imageView)
     }
 }
 
@@ -25,7 +34,7 @@ class PhotosGridController: LBTAListController<PhotoGridCell, String>, UICollect
         super.viewDidLoad()
         collectionView.backgroundColor = .lightGray
         
-        self.items = ["", "", ""]
+        self.items = ["blackFemaleDev2", "blackFemaleDev3", "blackFemaleDev4"]
     }
     
     let cellSpacing: CGFloat = 4
