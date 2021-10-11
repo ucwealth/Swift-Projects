@@ -27,7 +27,27 @@ class PostCell: LBTAListCell<String> {
     }
 }
 
-class MainController: LBTAListController<PostCell, String>, UICollectionViewDelegateFlowLayout {
+class StoryHeader: UICollectionReusableView {
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        backgroundColor = .systemOrange
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError()
+    }
+}
+
+class MainController: LBTAListHeaderController<PostCell, String, StoryHeader>, UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return .init(width: 0, height: 200)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return .init(top: 12, left: 0, bottom: 0, right: 0)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
