@@ -16,6 +16,8 @@
 		B407D3F12714D1F3009086F4 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B407D3F02714D1F3009086F4 /* Coordinator.swift */; };
 		B407D3F32714DBA0009086F4 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = B407D3F22714DBA0009086F4 /* Storyboarded.swift */; };
 		B407D3F52714DDBA009086F4 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B407D3F42714DDBA009086F4 /* MainCoordinator.swift */; };
+		B407D4002714E35F009086F4 /* BuyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B407D3FF2714E35F009086F4 /* BuyViewController.swift */; };
+		B407D4022714E37A009086F4 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B407D4012714E37A009086F4 /* CreateAccountViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		B407D3F02714D1F3009086F4 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		B407D3F22714DBA0009086F4 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		B407D3F42714DDBA009086F4 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		B407D3FF2714E35F009086F4 /* BuyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyViewController.swift; sourceTree = "<group>"; };
+		B407D4012714E37A009086F4 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,18 +66,60 @@
 		B407D3DB2714D1B5009086F4 /* CoordinatorDemo */ = {
 			isa = PBXGroup;
 			children = (
+				B407D3F62714E24E009086F4 /* Delegates */,
+				B407D3F82714E276009086F4 /* ViewControllers */,
+				B407D3F72714E266009086F4 /* Storyboards */,
+				B407D3FA2714E2A5009086F4 /* Resources */,
+				B407D3F92714E28E009086F4 /* Protocols */,
+				B407D3EA2714D1B8009086F4 /* Info.plist */,
+			);
+			path = CoordinatorDemo;
+			sourceTree = "<group>";
+		};
+		B407D3F62714E24E009086F4 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
 				B407D3DC2714D1B5009086F4 /* AppDelegate.swift */,
 				B407D3DE2714D1B5009086F4 /* SceneDelegate.swift */,
-				B407D3E02714D1B5009086F4 /* ViewController.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		B407D3F72714E266009086F4 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
 				B407D3E22714D1B5009086F4 /* Main.storyboard */,
-				B407D3E52714D1B8009086F4 /* Assets.xcassets */,
 				B407D3E72714D1B8009086F4 /* LaunchScreen.storyboard */,
-				B407D3EA2714D1B8009086F4 /* Info.plist */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		B407D3F82714E276009086F4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B407D3E02714D1B5009086F4 /* ViewController.swift */,
+				B407D3FF2714E35F009086F4 /* BuyViewController.swift */,
+				B407D4012714E37A009086F4 /* CreateAccountViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B407D3F92714E28E009086F4 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
 				B407D3F02714D1F3009086F4 /* Coordinator.swift */,
 				B407D3F22714DBA0009086F4 /* Storyboarded.swift */,
 				B407D3F42714DDBA009086F4 /* MainCoordinator.swift */,
 			);
-			path = CoordinatorDemo;
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		B407D3FA2714E2A5009086F4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B407D3E52714D1B8009086F4 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,7 +196,9 @@
 				B407D3F52714DDBA009086F4 /* MainCoordinator.swift in Sources */,
 				B407D3E12714D1B5009086F4 /* ViewController.swift in Sources */,
 				B407D3F32714DBA0009086F4 /* Storyboarded.swift in Sources */,
+				B407D4022714E37A009086F4 /* CreateAccountViewController.swift in Sources */,
 				B407D3DD2714D1B5009086F4 /* AppDelegate.swift in Sources */,
+				B407D4002714E35F009086F4 /* BuyViewController.swift in Sources */,
 				B407D3DF2714D1B5009086F4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
