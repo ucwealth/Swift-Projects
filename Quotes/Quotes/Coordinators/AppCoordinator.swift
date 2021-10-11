@@ -28,11 +28,22 @@ class AppCoordinator {
             
         }
         
+        quotesViewController.didShowSettings = { [weak self] in
+            self?.showSettings()
+        }
+        
         navigationController.pushViewController(quotesViewController, animated: true)
     }
     
-    private func showQuote() {
-        
+    private func showQuote(_ quote: Quote) {
+        let quoteViewController = QuoteViewController.instantiate()
+        quoteViewController.quote = quote
+        navigationController.pushViewController(quoteViewController, animated: true)
+    }
+    
+    private func showSettings() {
+        let settingsViewController = SettingsViewController.instantiate()
+        navigationController.present(settingsViewController, animated: true)
     }
     
 }
