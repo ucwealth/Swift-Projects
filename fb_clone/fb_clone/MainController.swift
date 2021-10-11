@@ -14,7 +14,6 @@ class PostCell: LBTAListCell<String> {
     let nameLabel = UILabel(text: "Name Label")
     let dateLabel = UILabel(text: "Sunday at 12.09PM")
     let postTextLabel = UILabel(text: "This is the post text")
-//    let imageViewGrid = UIView(backgroundColor: .orange)
     let photosGridController = PhotosGridController()
     
     override func setupViews() {
@@ -38,7 +37,7 @@ class MainController: LBTAListController<PostCell, String>, UICollectionViewDele
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return .init(width: view.frame.width, height: 300)
+        return .init(width: view.frame.width, height: 420)
     }
 }
 
