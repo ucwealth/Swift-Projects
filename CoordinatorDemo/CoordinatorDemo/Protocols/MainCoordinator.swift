@@ -16,22 +16,21 @@ class MainCoordinator: Coordinator {
         self.navigationController = navigationController
     }
     
-   func instantiateVC() {
+    func start() {
         let vc = ViewController.instantiate()
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: false)
     }
     
-    func start() {
-        instantiateVC()
-    }
-    
     func buySubscription() {
-        print("wahala")
-        instantiateVC()
+        let vc = BuyViewController.instantiate()
+        vc.coordinator = self
+        navigationController.pushViewController(vc, animated: false)
     }
     
     func createAccount() {
-        instantiateVC()
+        let vc = CreateAccountViewController.instantiate()
+        vc.coordinator = self
+        navigationController.pushViewController(vc, animated: false)
     }
 }

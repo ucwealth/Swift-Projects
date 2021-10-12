@@ -12,18 +12,15 @@ class ViewController: UIViewController, Storyboarded {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
 
     @IBAction func buttonTapped(_ sender: UIButton) {
-//        if sender.currentTitle! == "Buy" {
-//            coordinator?.buySubscription()
-//        } else {
-//            coordinator?.createAccount()
-//        }
-        print("before")
-        coordinator?.buySubscription()
-        print("after...")
+        if sender.currentTitle! == "Buy" {
+            coordinator?.buySubscription()
+        } else {
+            coordinator?.createAccount()
+        }
     }
     
     
