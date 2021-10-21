@@ -25,16 +25,24 @@ void main() {
   // print("I love ${celebrity}");
 
   // Arrays and Lists
-  List<int> favNumbers = [3, 6, 9, 12, 15];
-  favNumbers.add(18);
-  favNumbers.remove(6);
-  favNumbers.indexOf(6);
-  print(favNumbers);
+  // List<int> favNumbers = [3, 6, 9, 12, 15];
+  // favNumbers.add(18);
+  // favNumbers.remove(6);
+  // favNumbers.indexOf(6);
+  // print(favNumbers);
 
-  print(addNum(5, 2));
+  // print(addNum(5, 2));
+
+  // Use Prompt Function
 }
 
 // Functions
 double addNum(double num1, double num2) {
   return num1 + num2;
+}
+
+String Prompt(String promptText) {
+  print("${promptText}");
+  String? response = stdin.readLineSync();
+  return response!;
 }
