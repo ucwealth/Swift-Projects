@@ -34,19 +34,30 @@ void main() {
   // print(addNum(5, 2));
 
   // Use Prompt Function
-  // String color = Prompt("Enter a color: ");
-  // String noun = Prompt("Enter a plural noun: ");
-  // String celebrity = Prompt("Enter a celebrity name: ");
+  // String color = prompt("Enter a color: ");
+  // String noun = prompt("Enter a plural noun: ");
+  // String celebrity = prompt("Enter a celebrity name: ");
   // print("Roses are ${color}");
   // print("${noun} are blue");
   // print("I love ${celebrity}");
 
   // While Loops
-  int num = 0;
-  while (num < 5) {
-    print(num);
-    num++;
+  // int num = 0;
+  // while (num < 5) {
+  //   print(num);
+  //   num++;
+  // }
+
+  // Guessing game
+  String answer = "Christ Embassy";
+  String guess = "";
+  int guessCount = 0;
+
+  while (guess != answer) {
+    guess = prompt("Guess the name of my church");
+    guessCount++;
   }
+  print("Correct. You won in ${guessCount} guesses!");
 }
 
 // Functions
@@ -54,7 +65,7 @@ double addNum(double num1, double num2) {
   return num1 + num2;
 }
 
-String Prompt(String promptText) {
+String prompt(String promptText) {
   print("${promptText}");
   String? response = stdin.readLineSync();
   return response!;
