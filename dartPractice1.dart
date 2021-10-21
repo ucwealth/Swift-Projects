@@ -48,16 +48,23 @@ void main() {
   //   num++;
   // }
 
-  // Guessing game
-  String answer = "Christ Embassy";
-  String guess = "";
-  int guessCount = 0;
-
-  while (guess != answer) {
-    guess = prompt("Guess the name of my church");
-    guessCount++;
+  // For Loops
+  List<String> friends = ['Uche', 'Somto', 'Presh'];
+  for (int i = 0; i < friends.length; i++) {
+    print(friends[i]);
   }
-  print("Correct. You won in ${guessCount} guesses!");
+
+  // Guessing game
+  // String answer = "Christ Embassy";
+  // String guess = "";
+  // int guessCount = 0;
+  // while (guess != answer) {
+  //   guess = prompt("Guess the name of my church");
+  //   guessCount++;
+  // }
+  // print("Correct. You won in ${guessCount} guesses!");
+
+  //
 }
 
 // Functions
