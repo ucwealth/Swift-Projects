@@ -9,8 +9,20 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        HStack {
+            Image("time_management")
+                .resizable()
+                .scaledToFit()
+                .frame(height: 90)
+            VStack(alignment: .leading, spacing: 20){
+                Text("Interview Preparation Here")
+                    .fontWeight(.medium)
+                    .font(.headline)
+                Text("\u{} 249")
+                    .fontWeight(.medium)
+                    .font(.subheadline)
+            }
+        }
     }
 }
 
