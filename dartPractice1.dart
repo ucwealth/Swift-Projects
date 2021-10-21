@@ -34,6 +34,19 @@ void main() {
   // print(addNum(5, 2));
 
   // Use Prompt Function
+  // String color = Prompt("Enter a color: ");
+  // String noun = Prompt("Enter a plural noun: ");
+  // String celebrity = Prompt("Enter a celebrity name: ");
+  // print("Roses are ${color}");
+  // print("${noun} are blue");
+  // print("I love ${celebrity}");
+
+  // While Loops
+  int num = 0;
+  while (num < 5) {
+    print(num);
+    num++;
+  }
 }
 
 // Functions
