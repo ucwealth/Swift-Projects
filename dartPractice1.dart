@@ -70,11 +70,8 @@ void main() {
   // print("Correct. You won in ${guessCount} guesses!");
 
   // Class used
-  Book bible = Book();
-  bible.Author = "Holy Spirit";
-  bible.title = "Bible";
-  bible.numPages = 756;
-  print(bible);
+  Book bible = Book("Bible", "Holy Spirit", 789);
+  print(bible.Author);
 }
 
 // Functions
@@ -90,7 +87,13 @@ String prompt(String promptText) {
 
 // Classes
 class Book {
+  Book(String aTitle, String Author, int numPages) {
+    this.title = aTitle;
+    this.Author = Author;
+    this.numPages = numPages;
+  }
+
   late String title;
   String? Author;
-  int? numPages;
+  late int numPages;
 }
