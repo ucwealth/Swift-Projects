@@ -51,7 +51,12 @@ void main() {
   // For Loops
   List<String> friends = ['Uche', 'Somto', 'Presh'];
   for (int i = 0; i < friends.length; i++) {
-    print(friends[i]);
+    //  print(friends[i]);
+  }
+
+  // For...in loop
+  for (String friend in friends) {
+    // print(friend);
   }
 
   // Guessing game
@@ -64,7 +69,12 @@ void main() {
   // }
   // print("Correct. You won in ${guessCount} guesses!");
 
-  //
+  // Class used
+  Book bible = Book();
+  bible.Author = "Holy Spirit";
+  bible.title = "Bible";
+  bible.numPages = 756;
+  print(bible);
 }
 
 // Functions
@@ -76,4 +86,11 @@ String prompt(String promptText) {
   print("${promptText}");
   String? response = stdin.readLineSync();
   return response!;
+}
+
+// Classes
+class Book {
+  late String title;
+  String? Author;
+  int? numPages;
 }
